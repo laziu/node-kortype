@@ -1,0 +1,31 @@
+{
+  "name": "eng2kortype",
+  "version": "0.1.0",
+  "description": "Auto convert typo between English(Querty) and Korean(Dubeolsik).",
+  "keywords": [
+    "english",
+    "korean",
+    "typo",
+    "convert",
+    "fix",
+    "translate"
+  ],
+  "author": "Geonu Kim <laziu.cc@gmail.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laziu/node-eng2kortype.git"
+  },
+  "bugs": {
+    "url": "https://github.com/laziu/node-eng2kortype/issues"
+  },
+  "homepage": "https://github.com/laziu/node-eng2kortype#readme"
+}
