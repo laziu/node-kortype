@@ -1,3 +1,4 @@
+import { strict as assert } from "assert";
 import { querty2quertylike, quertylike2querty } from "../convert/querty--quertylike";
 import { dubeolsik2quertylike, quertylike2dubeolsik } from "../convert/dubeolsik--quertylike";
 import { hangul2dubeolsik, dubeolsik2hangul } from "../convert/hangul--dubeolsik";
@@ -15,6 +16,7 @@ export class KeyboardConverter {
   capsLock: boolean;
 
   constructor(value: string, type: KeyboardType, options?: KeyboardConverterOptions) {
+    assert(SupportedKeyboardType.includes(type));
     const { capsLock = false } = options || {};
 
     this.value = value;
@@ -35,6 +37,7 @@ export class KeyboardConverter {
   }
 
   convert(type: KeyboardType): KeyboardConverter {
+    assert(SupportedKeyboardType.includes(type));
     if (this.type === type) {
       return this;
     } else if (this.type === "querty" && type === "dubeolsik") {
@@ -49,8 +52,6 @@ export class KeyboardConverter {
       value = dubeolsik2quertylike(value);
       value = quertylike2querty(value, { capsLock: this.capsLock });
       this.value = value;
-    } else {
-      throw new Error(`unknown type ('${this.type}' → '${type}')`);
     }
     this.type = type;
     return this;

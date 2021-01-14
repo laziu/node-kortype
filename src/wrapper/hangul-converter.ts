@@ -1,3 +1,4 @@
+import { strict as assert } from "assert";
 import { hangul2dubeolsik, dubeolsik2hangul } from "../convert/hangul--dubeolsik";
 import { hangul2macHangul, macHangul2hangul } from "../convert/hangul--mac-hangul";
 
@@ -9,6 +10,7 @@ export class HangulConverter {
   type: HangulType;
 
   constructor(value: string, type: HangulType) {
+    assert(SupportedHangulType.includes(type));
     this.value = value;
     this.type = type;
   }
@@ -22,6 +24,8 @@ export class HangulConverter {
   }
 
   convert(type: HangulType): HangulConverter {
+    assert(SupportedHangulType.includes(type));
+
     if (this.type === type) return this;
 
     let value = this.value;
@@ -30,16 +34,12 @@ export class HangulConverter {
       value = dubeolsik2hangul(value);
     } else if (this.type === "mac") {
       value = macHangul2hangul(value);
-    } else if (this.type !== "complete") {
-      throw new Error(`unknown type ('${this.type}' → '${type}')`);
     }
 
     if (type === "keystroke") {
       value = hangul2dubeolsik(value);
     } else if (type === "mac") {
       value = hangul2macHangul(value);
-    } else if (type !== "complete") {
-      throw new Error(`unknown type ('${this.type}' → '${type}')`);
     }
 
     this.value = value;
