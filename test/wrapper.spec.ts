@@ -1,9 +1,10 @@
 import { assert } from "chai";
 import dedent from "ts-dedent";
-import { KeyboardConverter } from "./wrapper/keyboard-converter";
+import { KeyboardConverter } from "../src/wrapper/keyboard-converter";
+import { HangulConverter } from "../src/wrapper/hangul-converter";
 
 describe("Wrapper", () => {
-  it("KeyboardConvert", () => {
+  it("KeyboardConverter", () => {
     const data1 = {
       eng: dedent`
         The quick brown fox jumps over a(the) lazy dog.
