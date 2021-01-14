@@ -5,10 +5,12 @@
   "keywords": [
     "english",
     "korean",
+    "macos",
     "typo",
     "convert",
     "fix",
-    "translate"
+    "translate",
+    "hangul"
   ],
   "author": "Geonu Kim <laziu.cc@gmail.com>",
   "license": "MIT",
