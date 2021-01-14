@@ -21,7 +21,6 @@ export const Jungseong = "ᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲ
 export const Jongseong = "ᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂ";
 
 import { strict as assert } from "assert";
-import { AssertionError } from "chai";
 import {
   Choseong as ChoseongLetter,
   Jungseong as JungseongLetter,
@@ -53,5 +52,5 @@ export function jamo2letter(jamo: string): string {
   if (Choseong.includes(jamo)) return ChoseongLetter[Choseong.indexOf(jamo)];
   if (Jungseong.includes(jamo)) return JungseongLetter[Jungseong.indexOf(jamo)];
   if (Jongseong.includes(jamo)) return JongseongLetter[Jongseong.indexOf(jamo)];
-  throw new AssertionError(`'${jamo}' is not Modern Hangul Jamo`);
+  throw new Error(`'${jamo}' is not Modern Hangul Jamo`);
 }
