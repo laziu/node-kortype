@@ -13,14 +13,16 @@ export function hangul2macHangul(str: string): string {
     if (raw) {
       builder.push(raw);
     } else {
-      if (cho) {
+      if (!cho) {
+        if (jung) builder.push(jung);
+        if (jong) builder.push(jong);
+      } else if (!jung) {
+        builder.push(cho);
+        if (jong) builder.push(jong);
+      } else {
         builder.push(letter2jamo(cho, "cho"));
-      }
-      if (jung) {
         builder.push(letter2jamo(jung, "jung"));
-      }
-      if (jong) {
-        builder.push(letter2jamo(jong, "jong"));
+        if (jong) builder.push(letter2jamo(jong, "jong"));
       }
     }
   }
