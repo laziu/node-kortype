@@ -1,7 +1,7 @@
 {
-  "name": "eng2kortype",
+  "name": "kortype",
   "version": "0.1.0",
-  "description": "Auto convert typo between English(Querty) and Korean(Dubeolsik).",
+  "description": "Convert Korean typo of Querty/Dubeolsik.",
   "keywords": [
     "english",
     "korean",
@@ -39,10 +39,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laziu/node-eng2kortype.git"
+    "url": "git+https://github.com/laziu/node-kortype.git"
   },
   "bugs": {
-    "url": "https://github.com/laziu/node-eng2kortype/issues"
+    "url": "https://github.com/laziu/node-kortype/issues"
   },
-  "homepage": "https://github.com/laziu/node-eng2kortype#readme"
+  "homepage": "https://github.com/laziu/node-kortype#readme"
 }
