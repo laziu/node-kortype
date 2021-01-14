@@ -5,24 +5,41 @@ import { hangul2macHangul, macHangul2hangul } from "../convert/hangul--mac-hangu
 export type HangulType = "keystroke" | "complete" | "mac";
 export const SupportedHangulType = ["keystroke", "complete", "mac"];
 
+/** Convert Hangul codepoints to the another */
 export class HangulConverter {
+  /** Current string */
   value: string;
+  /** Current Hangul type */
   type: HangulType;
 
+  /**
+   * @param value     initial string value
+   * @param type      initial keyboard layout
+   */
   constructor(value: string, type: HangulType) {
     assert(SupportedHangulType.includes(type));
     this.value = value;
     this.type = type;
   }
 
+  /**
+   * Wrapper of constructor
+   * @param value     initial string value
+   * @param type      initial keyboard layout
+   */
   static set(value: string, type: HangulType): HangulConverter {
     return new this(value, type);
   }
 
+  /** Get current string value */
   get(): string {
     return this.value;
   }
 
+  /**
+   * Convert string with specified codepoint type
+   * @param type    target codepoint type
+   */
   convert(type: HangulType): HangulConverter {
     assert(SupportedHangulType.includes(type));
 
