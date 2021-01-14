@@ -81,8 +81,8 @@ const dataset: Data[] = [
   },
   {
     type: "dubeolsik--quertylike",
-    quertylike: `qwertyuiopasdfghjklzxcvbnm${S}q${S}w${S}e${S}r${S}t${S}y${S}o${S}p`,
-    dubeolsik: `ㅂㅈㄷㄱㅅㅛㅕㅑㅐㅔㅁㄴㅇㄹㅎㅗㅓㅏㅣㅋㅌㅊㅍㅠㅜㅡㅃㅉㄸㄲㅆ${S}ㅛㅒㅖ`,
+    quertylike: `qwertyuiopasdfghjklzxcvbnm${S}q${S}w${S}e${S}r${S}t${S}o${S}p`,
+    dubeolsik: `ㅂㅈㄷㄱㅅㅛㅕㅑㅐㅔㅁㄴㅇㄹㅎㅗㅓㅏㅣㅋㅌㅊㅍㅠㅜㅡㅃㅉㄸㄲㅆㅒㅖ`,
   },
   {
     type: "hangul--dubeolsik",

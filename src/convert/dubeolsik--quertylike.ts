@@ -63,5 +63,6 @@ export function quertylike2dubeolsik(str: string): string {
   for (const [normal, shifted] of Object.entries(ShiftHangulLayout)) {
     str = replaceAll(str, `${Shift}${normal}`, shifted);
   }
+  str = replaceAll(str, Shift, "");
   return str;
 }
