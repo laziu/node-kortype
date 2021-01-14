@@ -66,10 +66,10 @@ export function dubeolsik2hangul(str: string): string {
       }
     } else if (Jungseong.includes(letter)) {
       // 1 모음
-      if (last.cho && !last.jung) {
+      if (last.cho && !last.jung && !last.jong) {
         // 1.1 초성 + 중성
         last.jung = letter;
-      } else if (last.jung && JungseongMerge[`${last.jung}${letter}`]) {
+      } else if (last.jung && !last.jong && JungseongMerge[`${last.jung}${letter}`]) {
         // 1.2 중성 + 중성
         last.jung = JungseongMerge[`${last.jung}${letter}`];
       } else if (last.jong && Choseong.includes(last.jong)) {
