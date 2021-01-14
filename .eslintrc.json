@@ -15,5 +15,15 @@
   "plugins": [
     "@typescript-eslint"
   ],
-  "rules": {}
+  "rules": {},
+  "overrides": [
+    {
+      "files": [
+        "test/**/*.ts"
+      ],
+      "parserOptions": {
+        "project": "./test/tsconfig.json"
+      }
+    }
+  ]
 }
