@@ -1,7 +1,7 @@
 {
   "name": "kortype",
   "version": "0.1.0",
-  "description": "Convert Korean typo of Querty/Dubeolsik.",
+  "description": "Convert Korean typo of Querty/Dubeolsik, and translate Hangul codepoint bewteen Windows/macOS",
   "keywords": [
     "english",
     "korean",
