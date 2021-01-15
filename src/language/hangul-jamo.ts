@@ -20,13 +20,15 @@ export const Jungseong = "ᅡᅢᅣᅤᅥᅦᅧᅨᅩᅪᅫᅬᅭᅮᅯᅰᅱᅲ
 /** Jongseong Jamo, order by Hangul Syllables */
 export const Jongseong = "ᆨᆩᆪᆫᆬᆭᆮᆯᆰᆱᆲᆳᆴᆵᆶᆷᆸᆹᆺᆻᆼᆽᆾᆿᇀᇁᇂ";
 
-import { strict as assert } from "assert";
 import {
   Choseong as ChoseongLetter,
   Jungseong as JungseongLetter,
   Jongseong as JongseongLetter,
 } from "./hangul-letter";
 import { Range as LetterRange } from "./hangul-letter";
+import { strict } from "assert";
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const assert = "development" === process.env.NODE_ENV ? strict : () => {};
 
 /** Convert Hangul Letter (Hangul Compatibility Jamo) to Hangul Jamo */
 export function letter2jamo(letter: string, position: "cho" | "jung" | "jong"): string {

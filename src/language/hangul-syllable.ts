@@ -22,8 +22,10 @@ export type NonHangulSyllableInfo = {
   raw?: string;
 };
 
-import { strict as assert } from "assert";
 import { Choseong, Jungseong, Jongseong } from "./hangul-letter";
+import { strict } from "assert";
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+const assert = "development" === process.env.NODE_ENV ? strict : () => {};
 
 /** Construct single Hangul Syllable character */
 export function assamble(syllable: HangulSyllableInfo | NonHangulSyllableInfo): string {
